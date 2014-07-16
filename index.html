@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='myApp'>
+  <head>
+    <title>Angular Lunch &amp; Learn</title>
+  	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+    <!-- The CSS -->
+    <link href="app.css" rel="stylesheet"/>
+  </head>
+  <body ng-controller='mainController'>
+
+		<div class='sidenav' ng-include src='"views/partials/sidebar-nav.html"'></div>
+		
+		<div class="content" ui-view></div>
+
+    <!-- Angular scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular-animate.js"></script>
+    <script src="assets/js/angular-ui-router.min.js"></script>
+    <!-- Include lodash -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+    <!-- This will be minified in the future -->
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<h1>This is some account page that you can mess around with</h1>
+
+
+<p>{{userData.name}}</p>
+<label for="whatever">Username</label>
+<input type="text" ng-model='userData.username'>
+
+<label for="whatever">Email</label>
+<input type="text" ng-model='userData.email'>
+
+<label for="whatever">Phone</label>
+<input type="text" ng-model='userData.phone'>
+
+<h2>User Info</h2>
+<p>{{userData.name}}</p>
+<p>{{userData.username}}</p>
+<p>{{userData.email}}</p>
+<p>{{userData.phone}}</p>
+
+
+<h1>Edit Accordian Titles</h1>
+<input type="text" ng-repeat='item in accordianData' ng-model='item.title'>

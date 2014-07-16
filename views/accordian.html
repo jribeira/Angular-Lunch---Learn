@@ -1,0 +1,21 @@
+<h1>Accordian With Options</h1>
+
+<input type="text" placeholder='Search...' ng-model='search'>
+
+<div ng-hide='checkLength()'>
+	There are no items! Oh No!
+</div>
+
+<ul class='accordian-wrap' jr-accordian-wrap only-one='true'>
+  <li class='accordian' jr-accordian closed='0' open='1' index='{{$index}}' style='height:{{open_style}}' ng-repeat='item in accordianData | filter:search'></li>
+  <li class="accordian add-new" ng-show='addNew'>
+  	<h2>
+  		<input type="text" ng-model='newItem.title' ng-enter='enterPressed()' jr-auto-focus='addNew' placeholder='Add a title'>
+  	</h2>
+  	<div>
+  		<input type="text" ng-model='newItem.content' ng-enter='enterPressed()' placeholder='Add some content'>
+  	</div>
+  </li>
+</ul>
+
+<button class='btn blue-bg' ng-click='addItem()'>Add new</button>
